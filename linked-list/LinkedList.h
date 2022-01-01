@@ -25,7 +25,7 @@ class LinkedList
     virtual bool insert(int index, T);
     virtual bool insert(T);
     virtual T remove(int index);
-    virtual T pop();
+    virtual T shift();
     virtual T at(int index);
 };
 
@@ -110,7 +110,7 @@ bool LinkedList<T>::insert(T value)
 template<typename T>
 T LinkedList<T>::remove(int index)
 {
-  if(index == 0) return pop();
+  if(index == 0) return shift();
 
   Node<T>* beforenode = nullptr;
   Node<T>* deletenode = _root;
@@ -129,7 +129,7 @@ T LinkedList<T>::remove(int index)
 
 
 template<typename T>
-T LinkedList<T>::pop()
+T LinkedList<T>::shift()
 {
   T value = _root->value;
   Node<T>* ptr = _root;

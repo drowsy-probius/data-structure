@@ -1,3 +1,8 @@
+# files without extension
+*
+!*/
+!*.*
+
 # Prerequisites
 *.d
 
@@ -30,9 +35,6 @@
 *.exe
 *.out
 *.app
-
-# c++
-main
 
 # vscode
 .vscode
